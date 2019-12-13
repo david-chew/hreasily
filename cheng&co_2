@@ -1,0 +1,1425 @@
+Delivered-To: david.chew@hreasily.com
+Received: by 2002:a5d:4441:0:0:0:0:0 with SMTP id x1csp5217415wrr;
+        Tue, 10 Dec 2019 01:37:57 -0800 (PST)
+X-Google-Smtp-Source: APXvYqwm1z6xnrxFlb12Et/Ed4N0cO2EFxQ8w6h/s76EZis1u8tUZvJpdLSKfAMHWPzali4PK4wc
+X-Received: by 2002:a63:f844:: with SMTP id v4mr23084128pgj.71.1575970676635;
+        Tue, 10 Dec 2019 01:37:56 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1575970676; cv=none;
+        d=google.com; s=arc-20160816;
+        b=myDbobHtCnglbO1Z4TvGJvZm12W61qxeRJccd3BprMM5PRxROuEe31q6Db4ldHG/UT
+         TbsJwvzpsRBQ0VqOkjSdaHkaNdpJ4TDXQRK4+PggcfMo4lnPRDDPTOa6Vnc6lo2aT6YC
+         YWidNrK4i4uq5S8/oraamm4EV1P6GshYOvb5dY57pGG/kjjnaVhi2/Mr7hGpDYCsA1Si
+         eKzwCvm4fMdTPjQs422vQP+/HZ7xKA1IC2pDQFFOHfBI86owXgXkbes3WvebjvqJYBdo
+         LkhT5dvpsuIZI2V81cHyuxxhrJlwqvBXCM75anK650iJfkbbu5VYtm25bFPrpTIy7wOE
+         UChg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :in-reply-to:references:cc:to:from;
+        bh=duhjEEiz0n2e1siQaDRrJTQ3ujCso290WkCBgeeW1bU=;
+        b=hWQS13dEekEhv09qtH+vs1VocKHAKTlogMooA6wdGjVuK3tSg1S/Pykk+ggYKDlRaJ
+         6ifcRJp7IFIKHg2FZ0VhByWO2Bt9/1/xVVH+0CXnj3qza8+WzPvopzsAXV1SrRMJM4P7
+         BvOiDM2tyICDCbPsq0ss+Jkys6S3rTxmrhe2xiqZckij8sRMxzC2oWweI4270aDvWFMh
+         QG2ysmabEOMdpAB7vyBGvHy+xOJOxHduhMqNTSatoS/iKtE7iflBQoYI+Zm7BBYJTP9r
+         ZGxh9GvdXTPyOae5y/0t/xP33GI2VfklM5y84GMTmaepGQiAqySHRay9BN5ikHM8aQgD
+         4q9w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of ywyong@chengco.com.my designates 110.4.43.245 as permitted sender) smtp.mailfrom=ywyong@chengco.com.my;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=chengco.com.my
+Return-Path: <ywyong@chengco.com.my>
+Received: from spfilter-3.mschosting.com (spfilter3-out2.mschosting.com. [110.4.43.245])
+        by mx.google.com with ESMTPS id s3si1565446plq.139.2019.12.10.01.37.56
+        for <david.chew@hreasily.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 10 Dec 2019 01:37:56 -0800 (PST)
+Received-SPF: pass (google.com: domain of ywyong@chengco.com.my designates 110.4.43.245 as permitted sender) client-ip=110.4.43.245;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of ywyong@chengco.com.my designates 110.4.43.245 as permitted sender) smtp.mailfrom=ywyong@chengco.com.my;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=chengco.com.my
+Received: from falcarius.mschosting.com ([103.6.196.149]) by spfilter-3.mschosting.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.89) (envelope-from <ywyong@chengco.com.my>) id 1iebxc-00084c-NW for david.chew@hreasily.com; Tue, 10 Dec 2019 17:37:55 +0800
+Received: from [115.134.132.143] (port=62803 helo=IBM009) by falcarius.mschosting.com with esmtpa (Exim 4.92) (envelope-from <ywyong@chengco.com.my>) id 1iebxX-002qPt-Cd; Tue, 10 Dec 2019 17:37:36 +0800
+From: <ywyong@chengco.com.my>
+To: "'David Chew'" <david.chew@hreasily.com>
+Cc: <mmtai@chengco.com.my>
+References: <846ba003dfe366bcf7b70ff373cebe342ff95dc1@intercom> <CAMYEd7zfcvPAgqj9nunfzO-SZY--AJxKMW_-Wh3H9SGFtwUs_w@mail.gmail.com> <CAMYEd7zMEAvv97OD37mwg-ZFyCFYfChbM92Ou99D13FHRg8MXw@mail.gmail.com> <70a27b42-7ba3c02e-1575956935-24851012143@hreasily-9def567889d9.intercom-mail.com>
+In-Reply-To: <70a27b42-7ba3c02e-1575956935-24851012143@hreasily-9def567889d9.intercom-mail.com>
+Subject: FW: HReasily Important Update: Account(s) System Upgrade
+Date: Tue, 10 Dec 2019 17:37:37 +0800
+Message-ID: <006501d5af3d$755e2e30$601a8a90$@chengco.com.my>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="----=_NextPart_000_0066_01D5AF80.83865030"
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQKJjprd0/UvyV/305uxUl5JbLifmALG1VGoAhffBdMBda5g4qYYuQJw
+Content-Language: en-au
+X-AuthUser: ywyong@chengco.com.my
+X-Originating-IP: 103.6.196.149
+X-SpamExperts-Domain: cpanelfilter.mschosting.com
+X-SpamExperts-Username: 103.6.196.0/24
+Authentication-Results: mschosting.com; auth=pass smtp.auth=103.6.196.0/24@cpanelfilter.mschosting.com
+X-SpamExperts-Outgoing-Class: ham
+X-SpamExperts-Outgoing-Evidence: Combined (0.15)
+X-Recommended-Action: accept
+X-Filter-ID: Mvzo4OR0dZXEDF/gcnlw0fi3oD8HEy9ysrsB6Ile+oipSDasLI4SayDByyq9LIhVUZbR67CQ7/vm /hHDJU4RXkTNWdUk1Ol2OGx3IfrIJKywOmJyM1qr8uRnWBrbSAGDswABZUyLqasb5dfhdYFRA8vW 6jDJdnFzOj8V6qkm0uI3z69HGzGlKcMI73yZzV4Q6hIUScsneptl7OYSEnQM/3XpGCeulZALlD2V AvpAcEechEuTkxHyhle0ddpecsXepwweY791VgZxSw4xtpn7kSJ4vUi1iDNFMOFNRxybI/sleVNB G9KN87uqq4YR4MYUiHEHS4catoEDrzfTYHUcKM4xzJt+dLagQH7PSVL6OdMrq5wIKn5wxpp9rpDo RQzj+126GrZ5gmnUzq5CG3/e+ZB4RMjNrYhKfl0SAFHN1M5EDBffVZVjmVaNbG4ZJG7FR26zk9Nz j9YUUoLOqqUwTmcEPVGLj6FUECId7zpTGCXdgRj6yrQAuxbFOPSpYqPfmLF0wqTcEF+RrgN98ekF anggqPD4REtv5Cmb1CWBiz+pFsL1ULg6op+Dtnqb6qgmmUo5plW9Y81go6R4YdVo2al1r07cmbef hNqx0U8Yjj0Cn996kLU2Kwz4sRK+A9mnrSOIPpeqwlm2NDGXIJ2x7BN+gyjwZLRyhtI5PUwHV8oI ZJK4u0ww/TSd/cTg3Vvw2Mmj5vsaf2J0qNmqkzXUH2RfoslhlcCovU4QNOGvxyU2GLOKpMSi0leA t+NLmOSqNP8dh299nOQoTaDDW3+sd1KOP/hFMrSq0fTHfSNkbNdp1DySS8jVovc2Ry9Ifj0+K1Er w36W35MdVm3ym1PL6q+gMhhby4qiAxUbz/gHPTKjjtQ6gMjbD2RfUpG+jDN2UV8ShebT8U8Xw9HT DfreWbEhhDWq83Gqcz9Qo7S2zv76DxWSEoQUnaVSVuR240EwC5m6tyGj3uLn72dZE61FLhjoulfa D893ztNd4BkXhZmR27r9HYUzziTFhEVK8LUgTbGK3CUXGTcP9+GhTlH2unaYVbMuf1KqsOQkaRPS zBgwbVA/fmexh8/zhz5EUrcq6Mg17Sz0tyq4Ls/5X1c1iupd20MQezhLRwHXscX7hJ8xL7hrJSk6 0SF3F6RYOYr2
+X-Report-Abuse-To: spam@spfilter-1.mschosting.com
+
+------=_NextPart_000_0066_01D5AF80.83865030
+Content-Type: multipart/alternative; boundary="----=_NextPart_001_0067_01D5AF80.83865030"
+
+------=_NextPart_001_0067_01D5AF80.83865030
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi David,=20
+
+=20
+
+Thanks for your email.=20
+
+=20
+
+For privacy purpose, we hope our clients=E2=80=99 lists do not disclosed to=
+ your other partners.=20
+
+=20
+
+Thank you.
+
+=20
+
+Best Regards,
+
+Ms. Yong
+
+Veron Yong | PRO B Centre Sdn Bhd
+
+Wisma Cheng & Co, HQ
+
+18-2, Jalan 2/114, Kuchai Business Centre,=20
+
+Off Jalan Klang Lama, 58200 Kuala Lumpur.
+
+Email:  <mailto:ywyong@chengco.com.my> ywyong@chengco.com.my
+
+Tel : 03-7985 9999/ 03-7984 8988 (KL) (Ext: 8819)
+
+Website:  <http://www.chengco.com.my/> www.chengco.com.my
+
+    =20
+
+=20
+
+From: David Chew via HReasily <notifications@hreasily-9def567889d9.intercom=
+-mail.com>=20
+Sent: Tuesday, 10 December 2019 1:49 PM
+To: ywyong@chengco.com.my
+Subject: Re: HReasily Important Update: Account(s) System Upgrade
+
+=20
+
+  <https://hreasily-9def567889d9.intercom-mail.com/q/dW_G-MZNl_YzZf4B4LjdXw=
+~~/AAAAAQA~/RgRf0bbHPVcIaW50ZXJjb21CCgAgxzHvXbclD7FSFXl3eW9uZ0BjaGVuZ2NvLmN=
+vbS5teVgEAAAR5A~~>=20
+
+
+This message was sent to the following 17 people: David Chew, ONG YEE YUAN,=
+ YYC PAYROLL GBS 1, CHOONG CHAI LI, SOO WEI LIK, YYC PAYROLL GBS 2, WONG XI=
+NG HUI, Kevin Chin Kok Ping, LEE MEN YEE,  <mailto:support@hreasily.com> su=
+pport@hreasily.com, Martin, TAN SIOK KOON , DESMOND CHEN CHIA FU, LEE YAN Z=
+HEN, OH KAH YEIN, YONG YEN WAH,  <mailto:mmtai@chengco.com.my> mmtai@chengc=
+o.com.my. Replying to this email will notify them.=20
+
+
+Dear Partners,
+
+We are pleased to inform you that the system upgrade for your HReasily acco=
+unt(s) listed below was successful.
+
+*         794404-H
+
+*         INDAH CORPORATE GOVERNANCE SDN BHD
+
+*         Sunshine Industries (Malaysia) Sdn Bhd
+
+The system upgrade will enable us to serve you better with new features to =
+bulk manage your employees better and speedier page processing.
+
+Should you require any further clarification, please do not hesitate to rea=
+ch out to our friendly Support team via chat or email  <mailto:support@hrea=
+sily.com> support@hreasily.com.
+
+Have a great week ahead and looking forward to serve you better.
+
+With many thanks,
+
+ <http://www.hreasily.com/> https://www.hreasily.com/sites/default/files/LO=
+GO_FAW-03_0.png David Chew | Head of Customer Success
+Q Sentral
+Unit 39-02, East Wing, 2A, Jalan Stesen Sentral 2,
+Kuala Lumpur Sentral, 50470 Kuala Lumpur, Malaysia
+m : +60182666888
+e :  <mailto:david.chew@hreasily.com> david.chew@hreasily.com | w :  <http:=
+//www.hreasily.com/> www.hreasily.com  <https://www.linkedin.com/company/hr=
+easily/> https://www.hreasily.com/sites/default/files/email_imgs/linkedin.p=
+ng <https://www.facebook.com/HReasily> https://www.hreasily.com/sites/defau=
+lt/files/email_imgs/facebook.png <https://twitter.com/hreasily> https://www=
+.hreasily.com/sites/default/files/email_imgs/twitter.png <https://itunes.ap=
+ple.com/us/app/hreasily/id1260525721> https://www.hreasily.com/sites/defaul=
+t/files/email_imgs/appstore.png <https://play.google.com/store/apps/details=
+?id=3Dcom.hreasily.sg.employee&hl=3Den> https://www.hreasily.com/sites/defa=
+ult/files/email_imgs/googleplay.png Confidentiality Note: This email may co=
+ntain confidential and/or private information. If you received this email i=
+n error please delete and notify sender.
+
+=09
+
+
+On Wed, Dec 4, 2019 at 12:52 AM, "David Chew" < <mailto:david.chew@hreasily=
+.com> david.chew@hreasily.com> wrote:=20
+
+Dear Partners,
+
+=20
+
+We are currently in the midst of deploying a system upgrade for your HReasi=
+ly account(s) by batches.
+
+=20
+
+This system upgrade will enable us to serve you better with new features to=
+ bulk manage your employees better and speedier page processing.
+
+=20
+
+The following account(s) has been scheduled to be converted between 5 - 13 =
+December 2019.
+
+*      794404-H
+
+*      Sunshine Industries (Malaysia) Sdn Bhd
+
+*      INDAH CORPORATE GOVERNANCE SDN BHD
+
+We seek for your kind assistance NOT to update any details on your account(=
+s) to avoid loss of data but you or your customer(s) would still be able to=
+ access yet view the details during this period. The update is referred as =
+leave application, leave approval, payroll run and etc.
+
+=20
+
+An update will be sent via email once your account(s) have been successfull=
+y converted.
+
+=20
+
+Should you require any further clarification, please do not hesitate to rea=
+ch out to our friendly Support team via chat or email  <mailto:support@hrea=
+sily.com> support@hreasily.com.
+
+=20
+
+Have a great week ahead and looking forward to serve you better.
+
+=20
+
+With many thanks,
+
+=20
+
+ <http://www.hreasily.com/> https://www.hreasily.com/sites/default/files/LO=
+GO_FAW-03_0.png David Chew | Head of Customer Success
+Q Sentral
+Unit 39-02, East Wing, 2A, Jalan Stesen Sentral 2,
+Kuala Lumpur Sentral, 50470 Kuala Lumpur, Malaysia
+e :  <mailto:david.chew@hreasily.com> david.chew@hreasily.com | w :  <http:=
+//www.hreasily.com/> www.hreasily.com  <https://www.linkedin.com/company/hr=
+easily/> https://www.hreasily.com/sites/default/files/email_imgs/linkedin.p=
+ng <https://www.facebook.com/HReasily> https://www.hreasily.com/sites/defau=
+lt/files/email_imgs/facebook.png <https://twitter.com/hreasily> https://www=
+.hreasily.com/sites/default/files/email_imgs/twitter.png <https://itunes.ap=
+ple.com/us/app/hreasily/id1260525721> https://www.hreasily.com/sites/defaul=
+t/files/email_imgs/appstore.png <https://play.google.com/store/apps/details=
+?id=3Dcom.hreasily.sg.employee&hl=3Den> https://www.hreasily.com/sites/defa=
+ult/files/email_imgs/googleplay.png Confidentiality Note: This email may co=
+ntain confidential and/or private information. If you received this email i=
+n error please delete and notify sender.
+
+On Wed, Dec 4, 2019 at 12:49 AM, "David Chew" < <mailto:david.chew@hreasily=
+.com> david.chew@hreasily.com> wrote:=20
+
+Dear Partners,
+
+=20
+
+We are currently in the midst of deploying a system upgrade for your HReasi=
+ly account(s) by batches.
+
+=20
+
+This system upgrade will enable us to serve you better with new features to=
+ bulk manage your employees better and speedier page processing.
+
+=20
+
+The following account(s) has been scheduled to be converted between 5 - 13 =
+December 2019.
+
+*         SAPPHIRE PARAGON SDN BHD
+
+*         TRILLION HALLMARK SDN BHD
+
+We seek for your kind assistance NOT to update any details on your account(=
+s) to avoid loss of data but you or your customer(s) would still be able to=
+ access yet view the details during this period. The update is referred as =
+leave application, leave approval, payroll run and etc.
+
+=20
+
+An update will be sent via email once your account(s) have been successfull=
+y converted.
+
+=20
+
+Should you require any further clarification, please do not hesitate to rea=
+ch out to our friendly Support team via chat or email  <mailto:support@hrea=
+sily.com> support@hreasily.com.
+
+=20
+
+Have a great week ahead and looking forward to serve you better.
+
+=20
+
+With many thanks,
+
+=20
+
+ <http://www.hreasily.com/> https://www.hreasily.com/sites/default/files/LO=
+GO_FAW-03_0.png David Chew | Head of Customer Success
+Q Sentral
+Unit 39-02, East Wing, 2A, Jalan Stesen Sentral 2,
+Kuala Lumpur Sentral, 50470 Kuala Lumpur, Malaysia
+e :  <mailto:david.chew@hreasily.com> david.chew@hreasily.com | w :  <http:=
+//www.hreasily.com/> www.hreasily.com  <https://www.linkedin.com/company/hr=
+easily/> https://www.hreasily.com/sites/default/files/email_imgs/linkedin.p=
+ng <https://www.facebook.com/HReasily> https://www.hreasily.com/sites/defau=
+lt/files/email_imgs/facebook.png <https://twitter.com/hreasily> https://www=
+.hreasily.com/sites/default/files/email_imgs/twitter.png <https://itunes.ap=
+ple.com/us/app/hreasily/id1260525721> https://www.hreasily.com/sites/defaul=
+t/files/email_imgs/appstore.png <https://play.google.com/store/apps/details=
+?id=3Dcom.hreasily.sg.employee&hl=3Den> https://www.hreasily.com/sites/defa=
+ult/files/email_imgs/googleplay.png Confidentiality Note: This email may co=
+ntain confidential and/or private information. If you received this email i=
+n error please delete and notify sender.
+
+  <https://hreasily-9def567889d9.intercom-mail.com/via/o?h=3D43fb5cd99dad9c=
+89acd7dba2a0919ceb9bf4ec65-24851012143:4284629660>   <https://hreasily-9def=
+567889d9.intercom-mail.com/q/A8XRmvrlRcsN_Dob3Z_w0w~~/AAAAAQA~/RgRf0bbHPlcI=
+aW50ZXJjb21CCgAgxzHvXbclD7FSFXl3eW9uZ0BjaGVuZ2NvLmNvbS5teVgEAAAR5A~~>=20
+
+
+------=_NextPart_001_0067_01D5AF80.83865030
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head><meta http-equiv=3DContent-Type content=
+=3D"text/html; charset=3Dutf-8"><meta name=3DGenerator content=3D"Microsoft=
+ Word 15 (filtered medium)"><!--[if !mso]><style>v\:* {behavior:url(#defaul=
+t#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+=09{font-family:Helvetica;
+=09panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+=09{font-family:"Cambria Math";
+=09panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+=09{font-family:DengXian;
+=09panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+=09{font-family:Calibri;
+=09panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+=09{font-family:"\@DengXian";
+=09panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+=09{font-family:"MV Boli";
+=09panose-1:2 0 5 0 3 2 0 9 0 0;}
+@font-face
+=09{font-family:"Segoe Print";
+=09panose-1:2 0 6 0 0 0 0 0 0 0;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+=09{margin:0cm;
+=09margin-bottom:.0001pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+h1
+=09{mso-style-priority:9;
+=09mso-style-link:"Heading 1 Char";
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:24.0pt;
+=09font-family:"Calibri",sans-serif;
+=09font-weight:bold;}
+h2
+=09{mso-style-priority:9;
+=09mso-style-link:"Heading 2 Char";
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:18.0pt;
+=09font-family:"Calibri",sans-serif;
+=09font-weight:bold;}
+h3
+=09{mso-style-priority:9;
+=09mso-style-link:"Heading 3 Char";
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:13.5pt;
+=09font-family:"Calibri",sans-serif;
+=09font-weight:bold;}
+h4
+=09{mso-style-priority:9;
+=09mso-style-link:"Heading 4 Char";
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:12.0pt;
+=09font-family:"Calibri",sans-serif;
+=09font-weight:bold;}
+h5
+=09{mso-style-priority:9;
+=09mso-style-link:"Heading 5 Char";
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:10.0pt;
+=09font-family:"Calibri",sans-serif;
+=09font-weight:bold;}
+a:link, span.MsoHyperlink
+=09{mso-style-priority:99;
+=09color:blue;
+=09border:none windowtext 1.0pt;
+=09padding:0cm;
+=09text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+=09{mso-style-priority:99;
+=09color:purple;
+=09border:none windowtext 1.0pt;
+=09padding:0cm;
+=09text-decoration:underline;}
+span.Heading1Char
+=09{mso-style-name:"Heading 1 Char";
+=09mso-style-priority:9;
+=09mso-style-link:"Heading 1";
+=09font-family:"Calibri Light",sans-serif;
+=09color:#2F5496;}
+span.Heading2Char
+=09{mso-style-name:"Heading 2 Char";
+=09mso-style-priority:9;
+=09mso-style-link:"Heading 2";
+=09font-family:"Calibri Light",sans-serif;
+=09color:#2F5496;}
+span.Heading3Char
+=09{mso-style-name:"Heading 3 Char";
+=09mso-style-priority:9;
+=09mso-style-link:"Heading 3";
+=09font-family:"Calibri Light",sans-serif;
+=09color:#1F3763;}
+span.Heading4Char
+=09{mso-style-name:"Heading 4 Char";
+=09mso-style-priority:9;
+=09mso-style-link:"Heading 4";
+=09font-family:"Calibri Light",sans-serif;
+=09color:#2F5496;
+=09font-style:italic;}
+span.Heading5Char
+=09{mso-style-name:"Heading 5 Char";
+=09mso-style-priority:9;
+=09mso-style-link:"Heading 5";
+=09font-family:"Calibri Light",sans-serif;
+=09color:#2F5496;}
+p.msonormal0, li.msonormal0, div.msonormal0
+=09{mso-style-name:msonormal;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.readmsgbody, li.readmsgbody, div.readmsgbody
+=09{mso-style-name:readmsgbody;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.externalclass, li.externalclass, div.externalclass
+=09{mso-style-name:externalclass;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.main, li.main, div.main
+=09{mso-style-name:main;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Helvetica",sans-serif;}
+p.content-td, li.content-td, div.content-td
+=09{mso-style-name:content-td;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09line-height:15.0pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:#222222;}
+p.ratings, li.ratings, div.ratings
+=09{mso-style-name:ratings;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09border:none;
+=09padding:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.events, li.events, div.events
+=09{mso-style-name:events;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09background:whitesmoke;
+=09border:none;
+=09padding:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.rating-link, li.rating-link, div.rating-link
+=09{mso-style-name:rating-link;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.smiley, li.smiley, div.smiley
+=09{mso-style-name:smiley;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.divider, li.divider, div.divider
+=09{mso-style-name:divider;
+=09margin:0cm;
+=09margin-bottom:.0001pt;
+=09background:#F0F0F0;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:#F0F0F0;}
+p.feedback-text, li.feedback-text, div.feedback-text
+=09{mso-style-name:feedback-text;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:3.6pt;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.deemphasizedtext, li.deemphasizedtext, div.deemphasizedtext
+=09{mso-style-name:deemphasized_text;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:#8C8C8C;}
+p.senttotext, li.senttotext, div.senttotext
+=09{mso-style-name:sent_to_text;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09font-weight:bold;}
+p.darktext, li.darktext, div.darktext
+=09{mso-style-name:dark_text;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:#222222;}
+p.lighttext, li.lighttext, div.lighttext
+=09{mso-style-name:light_text;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:#999999;}
+p.history, li.history, div.history
+=09{mso-style-name:history;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:#500050;}
+p.historycontent, li.historycontent, div.historycontent
+=09{mso-style-name:history_content;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09border:none;
+=09padding:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.poweredbylink, li.poweredbylink, div.poweredbylink
+=09{mso-style-name:powered_by_link;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:#8C8C8C;
+=09font-weight:bold;}
+p.article-card, li.article-card, div.article-card
+=09{mso-style-name:article-card;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.intercom-interblocks-link-content-container, li.intercom-interblocks-link=
+-content-container, div.intercom-interblocks-link-content-container
+=09{mso-style-name:intercom-interblocks-link-content-container;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.messenger-card, li.messenger-card, div.messenger-card
+=09{mso-style-name:messenger-card;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.intercom-container, li.intercom-container, div.intercom-container
+=09{mso-style-name:intercom-container;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.avatar, li.avatar, div.avatar
+=09{mso-style-name:avatar;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.iconcontainer, li.iconcontainer, div.iconcontainer
+=09{mso-style-name:icon_container;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.icon, li.icon, div.icon
+=09{mso-style-name:icon;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.name, li.name, div.name
+=09{mso-style-name:name;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.signatureborder, li.signatureborder, div.signatureborder
+=09{mso-style-name:signature_border;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.link, li.link, div.link
+=09{mso-style-name:link;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.alignmiddle, li.alignmiddle, div.alignmiddle
+=09{mso-style-name:align_middle;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.article-card1, li.article-card1, div.article-card1
+=09{mso-style-name:article-card1;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:11.25pt;
+=09margin-left:0cm;
+=09border:none;
+=09padding:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.intercom-interblocks-link-content-container1, li.intercom-interblocks-lin=
+k-content-container1, div.intercom-interblocks-link-content-container1
+=09{mso-style-name:intercom-interblocks-link-content-container1;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:11.25pt;
+=09margin-left:0cm;
+=09border:none;
+=09padding:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.intercom-interblocks-link-content-container2, li.intercom-interblocks-lin=
+k-content-container2, div.intercom-interblocks-link-content-container2
+=09{mso-style-name:intercom-interblocks-link-content-container2;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:11.25pt;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.messenger-card1, li.messenger-card1, div.messenger-card1
+=09{mso-style-name:messenger-card1;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:11.25pt;
+=09margin-left:0cm;
+=09border:none;
+=09padding:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.link1, li.link1, div.link1
+=09{mso-style-name:link1;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:18.75pt;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.intercom-container1, li.intercom-container1, div.intercom-container1
+=09{mso-style-name:intercom-container1;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:12.0pt;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.avatar1, li.avatar1, div.avatar1
+=09{mso-style-name:avatar1;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.iconcontainer1, li.iconcontainer1, div.iconcontainer1
+=09{mso-style-name:icon_container1;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.icon1, li.icon1, div.icon1
+=09{mso-style-name:icon1;
+=09margin:0cm;
+=09margin-bottom:.0001pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.name1, li.name1, div.name1
+=09{mso-style-name:name1;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:black;}
+p.signatureborder1, li.signatureborder1, div.signatureborder1
+=09{mso-style-name:signature_border1;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:2.25pt;
+=09margin-left:0cm;
+=09line-height:0%;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.historycontent1, li.historycontent1, div.historycontent1
+=09{mso-style-name:history_content1;
+=09mso-margin-top-alt:auto;
+=09margin-right:0cm;
+=09mso-margin-bottom-alt:auto;
+=09margin-left:0cm;
+=09border:none;
+=09padding:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.intercom-container2, li.intercom-container2, div.intercom-container2
+=09{mso-style-name:intercom-container2;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:12.0pt;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.deemphasizedtext1, li.deemphasizedtext1, div.deemphasizedtext1
+=09{mso-style-name:deemphasized_text1;
+=09margin-top:0cm;
+=09margin-right:0cm;
+=09margin-bottom:11.25pt;
+=09margin-left:0cm;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09color:#8C8C8C;}
+span.EmailStyle68
+=09{mso-style-type:personal-reply;
+=09font-family:"Calibri",sans-serif;
+=09color:#002060;}
+.MsoChpDefault
+=09{mso-style-type:export-only;
+=09font-size:10.0pt;}
+@page WordSection1
+=09{size:612.0pt 792.0pt;
+=09margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+=09{page:WordSection1;}
+/* List Definitions */
+@list l0
+=09{mso-list-id:314533714;
+=09mso-list-template-ids:67555558;}
+@list l0:level1
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:36.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l0:level2
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:72.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l0:level3
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:108.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l0:level4
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:144.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l0:level5
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:180.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l0:level6
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:216.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l0:level7
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:252.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l0:level8
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:288.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l0:level9
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:324.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1
+=09{mso-list-id:731076775;
+=09mso-list-template-ids:-1334139112;}
+@list l1:level1
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:36.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1:level2
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:72.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1:level3
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:108.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1:level4
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:144.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1:level5
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:180.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1:level6
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:216.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1:level7
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:252.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1:level8
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:288.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l1:level9
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:324.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2
+=09{mso-list-id:1561554273;
+=09mso-list-template-ids:59140826;}
+@list l2:level1
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:36.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2:level2
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:72.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2:level3
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:108.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2:level4
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:144.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2:level5
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:180.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2:level6
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:216.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2:level7
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:252.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2:level8
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:288.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+@list l2:level9
+=09{mso-level-number-format:bullet;
+=09mso-level-text:=EF=82=B7;
+=09mso-level-tab-stop:324.0pt;
+=09mso-level-number-position:left;
+=09text-indent:-18.0pt;
+=09mso-ansi-font-size:10.0pt;
+=09font-family:Symbol;}
+ol
+=09{margin-bottom:0cm;}
+ul
+=09{margin-bottom:0cm;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body bgcolor=3Dwhite lang=3DEN-MY=
+ link=3Dblue vlink=3Dpurple><div class=3DWordSection1><p class=3DMsoNormal>=
+<span style=3D'color:#002060'>Hi David, <o:p></o:p></span></p><p class=3DMs=
+oNormal><span style=3D'color:#002060'><o:p>&nbsp;</o:p></span></p><p class=
+=3DMsoNormal><span style=3D'color:#002060'>Thanks for your email. <o:p></o:=
+p></span></p><p class=3DMsoNormal><span style=3D'color:#002060'><o:p>&nbsp;=
+</o:p></span></p><p class=3DMsoNormal><span style=3D'color:#002060'>For pri=
+vacy purpose, we hope our clients=E2=80=99 lists do not disclosed to your o=
+ther partners. <o:p></o:p></span></p><p class=3DMsoNormal><span style=3D'co=
+lor:#002060'><o:p>&nbsp;</o:p></span></p><div><p class=3DMsoNormal><span st=
+yle=3D'color:#002060'>Thank you.<o:p></o:p></span></p><p class=3DMsoNormal>=
+<span style=3D'color:#002060'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNor=
+mal><b><span lang=3DEN-US style=3D'font-size:10.0pt;color:#404040'>Best Reg=
+ards</span></b><span lang=3DEN-US style=3D'font-size:10.0pt;color:#404040'>=
+,</span><span style=3D'color:#404040'><o:p></o:p></span></p><p class=3DMsoN=
+ormal><b><span lang=3DEN-US style=3D'font-size:12.0pt;font-family:"Segoe Pr=
+int";color:#404040'>Ms. Yong<o:p></o:p></span></b></p><p class=3DMsoNormal>=
+<b><span style=3D'font-size:10.0pt;color:#404040'>Veron Yong </span></b><sp=
+an style=3D'font-size:10.0pt;color:#404040'>|<b> PRO B Centre Sdn Bhd<o:p><=
+/o:p></b></span></p><p class=3DMsoNormal><b><span style=3D'font-size:10.0pt=
+;color:#404040'>Wisma Cheng &amp; Co, HQ<o:p></o:p></span></b></p><p class=
+=3DMsoNormal><span style=3D'font-size:10.0pt;color:#404040'>18-2, Jalan 2/1=
+14, Kuchai Business Centre, <o:p></o:p></span></p><p class=3DMsoNormal><spa=
+n style=3D'font-size:10.0pt;color:#404040'>Off Jalan Klang Lama, 58200 Kual=
+a Lumpur.<o:p></o:p></span></p><p class=3DMsoNormal><span style=3D'font-siz=
+e:10.0pt;color:#404040'>Email: </span><span style=3D'font-size:10.0pt;color=
+:#0070C0'><a href=3D"mailto:ywyong@chengco.com.my"><span style=3D'color:#00=
+70C0;border:none'><span style=3D'border:none'>ywyong@chengco.com.my</span><=
+/span></a></span><span style=3D'font-size:10.0pt;color:#404040'><o:p></o:p>=
+</span></p><p class=3DMsoNormal><span style=3D'font-size:10.0pt;color:#4040=
+40'>Tel : 03-7985 9999/ 03-7984 8988 (KL) (Ext: 8819)<o:p></o:p></span></p>=
+<p class=3DMsoNormal><span style=3D'font-size:10.0pt;color:#404040'>Website=
+:</span><span style=3D'font-size:10.0pt;color:#0070C0'> </span><span style=
+=3D'color:#0070C0'><a href=3D"http://www.chengco.com.my/"><span style=3D'fo=
+nt-size:10.0pt;color:#0070C0;border:none'><span style=3D'border:none'>www.c=
+hengco.com.my</span></span></a></span><span style=3D'color:#404040'><o:p></=
+o:p></span></p><p class=3DMsoNormal><span style=3D'color:#1F497D'><img bord=
+er=3D0 width=3D129 height=3D55 style=3D'width:1.3437in;height:.5729in' id=
+=3D"Picture_x0020_1" src=3D"cid:image005.jpg@01D5AF80.830E3A00"></span><spa=
+n lang=3DEN-US style=3D'color:#1F497D'>&nbsp;&nbsp;&nbsp;&nbsp; </span><spa=
+n style=3D'color:#1F497D'><img border=3D0 width=3D79 height=3D63 style=3D'w=
+idth:.8229in;height:.6562in' id=3D"Picture_x0020_2" src=3D"cid:image006.png=
+@01D5AF80.830E3A00" alt=3D"cid:image004.png@01D51550.205C8940"></span><span=
+ style=3D'color:#002060'><o:p></o:p></span></p></div><p class=3DMsoNormal><=
+span style=3D'color:#002060'><o:p>&nbsp;</o:p></span></p><div><div style=3D=
+'border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm'><p c=
+lass=3DMsoNormal><b><span lang=3DEN-US>From:</span></b><span lang=3DEN-US> =
+David Chew via HReasily &lt;notifications@hreasily-9def567889d9.intercom-ma=
+il.com&gt; <br><b>Sent:</b> Tuesday, 10 December 2019 1:49 PM<br><b>To:</b>=
+ ywyong@chengco.com.my<br><b>Subject:</b> Re: HReasily Important Update: Ac=
+count(s) System Upgrade<o:p></o:p></span></p></div></div><p class=3DMsoNorm=
+al><o:p>&nbsp;</o:p></p><div><p class=3DMsoNormal><span style=3D'font-size:=
+1.0pt'><img border=3D0 width=3D1 height=3D1 style=3D'width:.0104in;height:.=
+0104in' id=3D"_x0000_i1025" src=3D"https://hreasily-9def567889d9.intercom-m=
+ail.com/q/dW_G-MZNl_YzZf4B4LjdXw~~/AAAAAQA~/RgRf0bbHPVcIaW50ZXJjb21CCgAgxzH=
+vXbclD7FSFXl3eW9uZ0BjaGVuZ2NvLmNvbS5teVgEAAAR5A~~"><o:p></o:p></span></p></=
+div><div align=3Dcenter><table class=3DMsoNormalTable border=3D0 cellspacin=
+g=3D0 cellpadding=3D0 width=3D"100%" style=3D'width:100.0%;border-collapse:=
+collapse;border-spacing: 0'><tr><td style=3D'padding:0cm 0cm 0cm 0cm'><p cl=
+ass=3Ddeemphasizedtext1 style=3D'line-height:15.0pt'><b><span style=3D'font=
+-family:"Helvetica",sans-serif'>This message was sent to the following 17 p=
+eople: David Chew, ONG YEE YUAN, YYC PAYROLL GBS 1, CHOONG CHAI LI, SOO WEI=
+ LIK, YYC PAYROLL GBS 2, WONG XING HUI, Kevin Chin Kok Ping, LEE MEN YEE, <=
+a href=3D"mailto:support@hreasily.com"><span style=3D'border:none'><span st=
+yle=3D'border:none'>support@hreasily.com</span></span></a>, Martin, TAN SIO=
+K KOON , DESMOND CHEN CHIA FU, LEE YAN ZHEN, OH KAH YEIN, YONG YEN WAH, <a =
+href=3D"mailto:mmtai@chengco.com.my"><span style=3D'border:none'><span styl=
+e=3D'border:none'>mmtai@chengco.com.my</span></span></a>. Replying to this =
+email will notify them. <o:p></o:p></span></b></p></td></tr><tr><td style=
+=3D'padding:0cm 0cm 0cm 0cm'><div><p class=3DMsoNormal style=3D'margin-bott=
+om:11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-=
+serif;color:#222222'>Dear Partners,<br><br>We are pleased to inform you tha=
+t the system upgrade for your HReasily account(s) listed below was successf=
+ul.<o:p></o:p></span></p><p class=3DMsoNormal style=3D'mso-margin-top-alt:3=
+.75pt;margin-right:0cm;margin-bottom:3.75pt;margin-left:30.0pt;text-indent:=
+-18.0pt;line-height:15.0pt;mso-list:l2 level1 lfo1'><![if !supportLists]><s=
+pan style=3D'font-size:10.0pt;font-family:Symbol;color:#222222'><span style=
+=3D'mso-list:Ignore'>=C2=B7<span style=3D'font:7.0pt "Times New Roman"'>&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif=
+]><span style=3D'font-family:"Helvetica",sans-serif;color:#222222'>794404-H=
+<o:p></o:p></span></p><p class=3DMsoNormal style=3D'mso-margin-top-alt:3.75=
+pt;margin-right:0cm;margin-bottom:3.75pt;margin-left:30.0pt;text-indent:-18=
+.0pt;line-height:15.0pt;mso-list:l2 level1 lfo1'><![if !supportLists]><span=
+ style=3D'font-size:10.0pt;font-family:Symbol;color:#222222'><span style=3D=
+'mso-list:Ignore'>=C2=B7<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><=
+span style=3D'font-family:"Helvetica",sans-serif;color:#222222'>INDAH CORPO=
+RATE GOVERNANCE SDN BHD<o:p></o:p></span></p><p class=3DMsoNormal style=3D'=
+mso-margin-top-alt:3.75pt;margin-right:0cm;margin-bottom:3.75pt;margin-left=
+:30.0pt;text-indent:-18.0pt;line-height:15.0pt;mso-list:l2 level1 lfo1'><![=
+if !supportLists]><span style=3D'font-size:10.0pt;font-family:Symbol;color:=
+#222222'><span style=3D'mso-list:Ignore'>=C2=B7<span style=3D'font:7.0pt "T=
+imes New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></=
+span></span><![endif]><span style=3D'font-family:"Helvetica",sans-serif;col=
+or:#222222'>Sunshine Industries (Malaysia) Sdn Bhd<o:p></o:p></span></p><p =
+class=3DMsoNormal style=3D'line-height:15.0pt'><span style=3D'font-family:"=
+Helvetica",sans-serif;color:#222222'>The system upgrade will enable us to s=
+erve you better with new features to bulk manage your employees better and =
+speedier page processing.<br><br>Should you require any further clarificati=
+on, please do not hesitate to reach out to our friendly Support team via ch=
+at or email <a href=3D"mailto:support@hreasily.com" target=3D"_blank"><span=
+ style=3D'color:#1251BA'>support@hreasily.com</span></a>.<br><br>Have a gre=
+at week ahead and looking forward to serve you better.<br><br>With many tha=
+nks,<br><br><a href=3D"http://www.hreasily.com/" target=3D"_blank"><span st=
+yle=3D'color:#1251BA'>https://www.hreasily.com/sites/default/files/LOGO_FAW=
+-03_0.png</span></a> <b>David Chew</b> | <i>Head of Customer Success</i><br=
+>Q Sentral<br>Unit 39-02, East Wing, 2A, Jalan Stesen Sentral 2,<br>Kuala L=
+umpur Sentral, 50470 Kuala Lumpur, Malaysia<br>m : +60182666888<br>e : <a h=
+ref=3D"mailto:david.chew@hreasily.com" target=3D"_blank"><span style=3D'col=
+or:#1251BA'>david.chew@hreasily.com</span></a> | w : <a href=3D"http://www.=
+hreasily.com/" target=3D"_blank"><span style=3D'color:#1251BA'>www.hreasily=
+.com</span></a> <a href=3D"https://www.linkedin.com/company/hreasily/" targ=
+et=3D"_blank"><span style=3D'color:#1251BA'>https://www.hreasily.com/sites/=
+default/files/email_imgs/linkedin.png</span></a><a href=3D"https://www.face=
+book.com/HReasily" target=3D"_blank"><span style=3D'color:#1251BA'>https://=
+www.hreasily.com/sites/default/files/email_imgs/facebook.png</span></a><a h=
+ref=3D"https://twitter.com/hreasily" target=3D"_blank"><span style=3D'color=
+:#1251BA'>https://www.hreasily.com/sites/default/files/email_imgs/twitter.p=
+ng</span></a><a href=3D"https://itunes.apple.com/us/app/hreasily/id12605257=
+21" target=3D"_blank"><span style=3D'color:#1251BA'>https://www.hreasily.co=
+m/sites/default/files/email_imgs/appstore.png</span></a><a href=3D"https://=
+play.google.com/store/apps/details?id=3Dcom.hreasily.sg.employee&amp;hl=3De=
+n" target=3D"_blank"><span style=3D'color:#1251BA'>https://www.hreasily.com=
+/sites/default/files/email_imgs/googleplay.png</span></a> <b>Confidentialit=
+y Note: </b>This email may contain confidential and/or private information.=
+ If you received this email in error please delete and notify sender.<o:p><=
+/o:p></span></p></div></td></tr><tr style=3D'height:26.25pt'><td style=3D'p=
+adding:0cm 0cm 0cm 0cm;height:26.25pt'></td></tr><tr><td style=3D'padding:0=
+cm 0cm 0cm 0cm'><div><div><p class=3DMsoNormal style=3D'line-height:15.0pt'=
+><span style=3D'font-family:"Helvetica",sans-serif;color:#500050'>On Wed, D=
+ec 4, 2019 at 12:52 AM, &quot;David Chew&quot; &lt;<a href=3D"mailto:david.=
+chew@hreasily.com"><span style=3D'border:none'><span style=3D'border:none'>=
+david.chew@hreasily.com</span></span></a>&gt; wrote: <o:p></o:p></span></p>=
+<blockquote style=3D'border:none;border-left:solid #CCCCCC 1.0pt;padding:0c=
+m 0cm 0cm 6.0pt;margin-left:4.8pt;margin-right:0cm'><div><p class=3DMsoNorm=
+al style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font-f=
+amily:"Helvetica",sans-serif;color:#500050'>Dear Partners,<o:p></o:p></span=
+></p><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;line-height:15.0pt=
+'><span style=3D'font-family:"Helvetica",sans-serif;color:#500050'><o:p>&nb=
+sp;</o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;lin=
+e-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-serif;color:#5=
+00050'>We are currently in the midst of deploying a system upgrade for your=
+ HReasily account(s) by batches.<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font-fami=
+ly:"Helvetica",sans-serif;color:#500050'><o:p>&nbsp;</o:p></span></p><p cla=
+ss=3DMsoNormal style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span sty=
+le=3D'font-family:"Helvetica",sans-serif;color:#500050'>This system upgrade=
+ will enable us to serve you better with new features to bulk manage your e=
+mployees better and speedier page processing.<o:p></o:p></span></p><p class=
+=3DMsoNormal style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=
+=3D'font-family:"Helvetica",sans-serif;color:#500050'><o:p>&nbsp;</o:p></sp=
+an></p><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;line-height:15.0=
+pt'><b><span style=3D'font-family:"Helvetica",sans-serif;color:#500050'>The=
+ following account(s) has been scheduled to be converted between 5 - 13 Dec=
+ember 2019</span></b><span style=3D'font-family:"Helvetica",sans-serif;colo=
+r:#500050'>.<o:p></o:p></span></p><p class=3DMsoNormal style=3D'mso-margin-=
+top-alt:3.75pt;margin-right:0cm;margin-bottom:3.75pt;margin-left:30.0pt;tex=
+t-indent:-18.0pt;line-height:15.0pt;mso-list:l1 level1 lfo2'><![if !support=
+Lists]><span style=3D'font-size:10.0pt;font-family:Symbol;color:#500050'><s=
+pan style=3D'mso-list:Ignore'>=C2=B7<span style=3D'font:7.0pt "Times New Ro=
+man"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span s=
+tyle=3D'font-family:"Helvetica",sans-serif;color:#500050'>794404-H<o:p></o:=
+p></span></p><p class=3DMsoNormal style=3D'mso-margin-top-alt:3.75pt;margin=
+-right:0cm;margin-bottom:3.75pt;margin-left:30.0pt;text-indent:-18.0pt;line=
+-height:15.0pt;mso-list:l1 level1 lfo2'><![if !supportLists]><span style=3D=
+'font-size:10.0pt;font-family:Symbol;color:#500050'><span style=3D'mso-list=
+:Ignore'>=C2=B7<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; </span></span></span><![endif]><span style=3D'font-family:"=
+Helvetica",sans-serif;color:#500050'>Sunshine Industries (Malaysia) Sdn Bhd=
+<o:p></o:p></span></p><p class=3DMsoNormal style=3D'mso-margin-top-alt:3.75=
+pt;margin-right:0cm;margin-bottom:3.75pt;margin-left:30.0pt;text-indent:-18=
+.0pt;line-height:15.0pt;mso-list:l1 level1 lfo2'><![if !supportLists]><span=
+ style=3D'font-size:10.0pt;font-family:Symbol;color:#500050'><span style=3D=
+'mso-list:Ignore'>=C2=B7<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style=3D'font=
+-family:"Helvetica",sans-serif;color:#500050'>INDAH CORPORATE GOVERNANCE SD=
+N BHD<o:p></o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom:11.2=
+5pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-serif;c=
+olor:#500050'>We seek for your kind assistance <b>NOT to update any details=
+ on your account(s) to avoid loss of data</b> but you or your customer(s) w=
+ould still be able to access yet view the details during this period. The u=
+pdate is referred as leave application, leave approval, payroll run and etc=
+.<o:p></o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;=
+line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-serif;color=
+:#500050'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal style=3D'margin-=
+bottom:11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",s=
+ans-serif;color:#500050'>An update will be sent via email once your account=
+(s) have been successfully converted.<o:p></o:p></span></p><p class=3DMsoNo=
+rmal style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font=
+-family:"Helvetica",sans-serif;color:#500050'><o:p>&nbsp;</o:p></span></p><=
+p class=3DMsoNormal style=3D'margin-bottom:11.25pt;line-height:15.0pt'><spa=
+n style=3D'font-family:"Helvetica",sans-serif;color:#500050'>Should you req=
+uire any further clarification, please do not hesitate to reach out to our =
+friendly Support team via chat or email <a href=3D"mailto:support@hreasily.=
+com" target=3D"_blank"><span style=3D'color:#8C8C8C'>support@hreasily.com</=
+span></a>.<o:p></o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom=
+:11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-se=
+rif;color:#500050'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal style=
+=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font-family:"H=
+elvetica",sans-serif;color:#500050'>Have a great week ahead and looking for=
+ward to serve you better.<o:p></o:p></span></p><p class=3DMsoNormal style=
+=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font-family:"H=
+elvetica",sans-serif;color:#500050'><o:p>&nbsp;</o:p></span></p><p class=3D=
+MsoNormal style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D=
+'font-family:"Helvetica",sans-serif;color:#500050'>With many thanks,<o:p></=
+o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;line-hei=
+ght:15.0pt'><span style=3D'font-family:"Helvetica",sans-serif;color:#500050=
+'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal style=3D'line-height:15.=
+0pt'><span style=3D'font-family:"Helvetica",sans-serif;color:#500050'><a hr=
+ef=3D"http://www.hreasily.com/" target=3D"_blank"><span style=3D'color:#8C8=
+C8C'>https://www.hreasily.com/sites/default/files/LOGO_FAW-03_0.png</span><=
+/a> <b>David Chew</b> | <i>Head of Customer Success</i><br>Q Sentral<br>Uni=
+t 39-02, East Wing, 2A, Jalan Stesen Sentral 2,<br>Kuala Lumpur Sentral, 50=
+470 Kuala Lumpur, Malaysia<br>e : <a href=3D"mailto:david.chew@hreasily.com=
+" target=3D"_blank"><span style=3D'color:#8C8C8C'>david.chew@hreasily.com</=
+span></a> | w : <a href=3D"http://www.hreasily.com/" target=3D"_blank"><spa=
+n style=3D'color:#8C8C8C'>www.hreasily.com</span></a> <a href=3D"https://ww=
+w.linkedin.com/company/hreasily/" target=3D"_blank"><span style=3D'color:#8=
+C8C8C'>https://www.hreasily.com/sites/default/files/email_imgs/linkedin.png=
+</span></a><a href=3D"https://www.facebook.com/HReasily" target=3D"_blank">=
+<span style=3D'color:#8C8C8C'>https://www.hreasily.com/sites/default/files/=
+email_imgs/facebook.png</span></a><a href=3D"https://twitter.com/hreasily" =
+target=3D"_blank"><span style=3D'color:#8C8C8C'>https://www.hreasily.com/si=
+tes/default/files/email_imgs/twitter.png</span></a><a href=3D"https://itune=
+s.apple.com/us/app/hreasily/id1260525721" target=3D"_blank"><span style=3D'=
+color:#8C8C8C'>https://www.hreasily.com/sites/default/files/email_imgs/apps=
+tore.png</span></a><a href=3D"https://play.google.com/store/apps/details?id=
+=3Dcom.hreasily.sg.employee&amp;hl=3Den" target=3D"_blank"><span style=3D'c=
+olor:#8C8C8C'>https://www.hreasily.com/sites/default/files/email_imgs/googl=
+eplay.png</span></a> <b>Confidentiality Note: </b>This email may contain co=
+nfidential and/or private information. If you received this email in error =
+please delete and notify sender.<o:p></o:p></span></p></div><div><p class=
+=3DMsoNormal style=3D'line-height:15.0pt'><span style=3D'font-family:"Helve=
+tica",sans-serif;color:#500050'>On Wed, Dec 4, 2019 at 12:49 AM, &quot;Davi=
+d Chew&quot; &lt;<a href=3D"mailto:david.chew@hreasily.com"><span style=3D'=
+border:none'><span style=3D'border:none'>david.chew@hreasily.com</span></sp=
+an></a>&gt; wrote: <o:p></o:p></span></p><blockquote style=3D'border:none;b=
+order-left:solid #CCCCCC 1.0pt;padding:0cm 0cm 0cm 6.0pt;margin-left:4.8pt;=
+margin-right:0cm'><div><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;=
+line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-serif;color=
+:#500050'>Dear Partners,<o:p></o:p></span></p><p class=3DMsoNormal style=3D=
+'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helv=
+etica",sans-serif;color:#500050'><o:p>&nbsp;</o:p></span></p><p class=3DMso=
+Normal style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'fo=
+nt-family:"Helvetica",sans-serif;color:#500050'>We are currently in the mid=
+st of deploying a system upgrade for your HReasily account(s) by batches.<o=
+:p></o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;lin=
+e-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-serif;color:#5=
+00050'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal style=3D'margin-bot=
+tom:11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans=
+-serif;color:#500050'>This system upgrade will enable us to serve you bette=
+r with new features to bulk manage your employees better and speedier page =
+processing.<o:p></o:p></span></p><p class=3DMsoNormal style=3D'margin-botto=
+m:11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-s=
+erif;color:#500050'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal style=
+=3D'margin-bottom:11.25pt;line-height:15.0pt'><b><span style=3D'font-family=
+:"Helvetica",sans-serif;color:#500050'>The following account(s) has been sc=
+heduled to be converted between 5 - 13 December 2019</span></b><span style=
+=3D'font-family:"Helvetica",sans-serif;color:#500050'>.<o:p></o:p></span></=
+p><p class=3DMsoNormal style=3D'mso-margin-top-alt:3.75pt;margin-right:0cm;=
+margin-bottom:3.75pt;margin-left:30.0pt;text-indent:-18.0pt;line-height:15.=
+0pt;mso-list:l0 level1 lfo3'><![if !supportLists]><span style=3D'font-size:=
+10.0pt;font-family:Symbol;color:#500050'><span style=3D'mso-list:Ignore'>=
+=C2=B7<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style=3D'font=
+-family:"Helvetica",sans-serif;color:#500050'>SAPPHIRE PARAGON SDN BHD<o:p>=
+</o:p></span></p><p class=3DMsoNormal style=3D'mso-margin-top-alt:3.75pt;ma=
+rgin-right:0cm;margin-bottom:3.75pt;margin-left:30.0pt;text-indent:-18.0pt;=
+line-height:15.0pt;mso-list:l0 level1 lfo3'><![if !supportLists]><span styl=
+e=3D'font-size:10.0pt;font-family:Symbol;color:#500050'><span style=3D'mso-=
+list:Ignore'>=C2=B7<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span =
+style=3D'font-family:"Helvetica",sans-serif;color:#500050'>TRILLION HALLMAR=
+K SDN BHD<o:p></o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom:=
+11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-ser=
+if;color:#500050'>We seek for your kind assistance <b>NOT to update any det=
+ails on your account(s) to avoid loss of data</b> but you or your customer(=
+s) would still be able to access yet view the details during this period. T=
+he update is referred as leave application, leave approval, payroll run and=
+ etc.<o:p></o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom:11.2=
+5pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",sans-serif;c=
+olor:#500050'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal style=3D'mar=
+gin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helvetic=
+a",sans-serif;color:#500050'>An update will be sent via email once your acc=
+ount(s) have been successfully converted.<o:p></o:p></span></p><p class=3DM=
+soNormal style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'=
+font-family:"Helvetica",sans-serif;color:#500050'><o:p>&nbsp;</o:p></span><=
+/p><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;line-height:15.0pt'>=
+<span style=3D'font-family:"Helvetica",sans-serif;color:#500050'>Should you=
+ require any further clarification, please do not hesitate to reach out to =
+our friendly Support team via chat or email <a href=3D"mailto:support@hreas=
+ily.com" target=3D"_blank"><span style=3D'color:#8C8C8C'>support@hreasily.c=
+om</span></a>.<o:p></o:p></span></p><p class=3DMsoNormal style=3D'margin-bo=
+ttom:11.25pt;line-height:15.0pt'><span style=3D'font-family:"Helvetica",san=
+s-serif;color:#500050'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal sty=
+le=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font-family:=
+"Helvetica",sans-serif;color:#500050'>Have a great week ahead and looking f=
+orward to serve you better.<o:p></o:p></span></p><p class=3DMsoNormal style=
+=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D'font-family:"H=
+elvetica",sans-serif;color:#500050'><o:p>&nbsp;</o:p></span></p><p class=3D=
+MsoNormal style=3D'margin-bottom:11.25pt;line-height:15.0pt'><span style=3D=
+'font-family:"Helvetica",sans-serif;color:#500050'>With many thanks,<o:p></=
+o:p></span></p><p class=3DMsoNormal style=3D'margin-bottom:11.25pt;line-hei=
+ght:15.0pt'><span style=3D'font-family:"Helvetica",sans-serif;color:#500050=
+'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal style=3D'line-height:15.=
+0pt'><span style=3D'font-family:"Helvetica",sans-serif;color:#500050'><a hr=
+ef=3D"http://www.hreasily.com/" target=3D"_blank"><span style=3D'color:#8C8=
+C8C'>https://www.hreasily.com/sites/default/files/LOGO_FAW-03_0.png</span><=
+/a> <b>David Chew</b> | <i>Head of Customer Success</i><br>Q Sentral<br>Uni=
+t 39-02, East Wing, 2A, Jalan Stesen Sentral 2,<br>Kuala Lumpur Sentral, 50=
+470 Kuala Lumpur, Malaysia<br>e : <a href=3D"mailto:david.chew@hreasily.com=
+" target=3D"_blank"><span style=3D'color:#8C8C8C'>david.chew@hreasily.com</=
+span></a> | w : <a href=3D"http://www.hreasily.com/" target=3D"_blank"><spa=
+n style=3D'color:#8C8C8C'>www.hreasily.com</span></a> <a href=3D"https://ww=
+w.linkedin.com/company/hreasily/" target=3D"_blank"><span style=3D'color:#8=
+C8C8C'>https://www.hreasily.com/sites/default/files/email_imgs/linkedin.png=
+</span></a><a href=3D"https://www.facebook.com/HReasily" target=3D"_blank">=
+<span style=3D'color:#8C8C8C'>https://www.hreasily.com/sites/default/files/=
+email_imgs/facebook.png</span></a><a href=3D"https://twitter.com/hreasily" =
+target=3D"_blank"><span style=3D'color:#8C8C8C'>https://www.hreasily.com/si=
+tes/default/files/email_imgs/twitter.png</span></a><a href=3D"https://itune=
+s.apple.com/us/app/hreasily/id1260525721" target=3D"_blank"><span style=3D'=
+color:#8C8C8C'>https://www.hreasily.com/sites/default/files/email_imgs/apps=
+tore.png</span></a><a href=3D"https://play.google.com/store/apps/details?id=
+=3Dcom.hreasily.sg.employee&amp;hl=3Den" target=3D"_blank"><span style=3D'c=
+olor:#8C8C8C'>https://www.hreasily.com/sites/default/files/email_imgs/googl=
+eplay.png</span></a> <b>Confidentiality Note: </b>This email may contain co=
+nfidential and/or private information. If you received this email in error =
+please delete and notify sender.<o:p></o:p></span></p></div></blockquote></=
+div></blockquote></div></div></td></tr></table></div><p class=3DMsoNormal><=
+img border=3D0 width=3D1 height=3D1 style=3D'width:.0104in;height:.0104in' =
+id=3D"_x0000_i1026" src=3D"https://hreasily-9def567889d9.intercom-mail.com/=
+via/o?h=3D43fb5cd99dad9c89acd7dba2a0919ceb9bf4ec65-24851012143:4284629660" =
+alt=3Dintercom><img border=3D0 width=3D1 height=3D1 style=3D'width:.0104in;=
+height:.0104in' id=3D"_x0000_i1027" src=3D"https://hreasily-9def567889d9.in=
+tercom-mail.com/q/A8XRmvrlRcsN_Dob3Z_w0w~~/AAAAAQA~/RgRf0bbHPlcIaW50ZXJjb21=
+CCgAgxzHvXbclD7FSFXl3eW9uZ0BjaGVuZ2NvLmNvbS5teVgEAAAR5A~~"><o:p></o:p></p><=
+/div></body></html>
+------=_NextPart_001_0067_01D5AF80.83865030--
+------=_NextPart_000_0066_01D5AF80.83865030
+Content-Type: image/jpeg; name="image005.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image005.jpg@01D5AF80.830E3A00>
+
+
+------=_NextPart_000_0066_01D5AF80.83865030
+Content-Type: image/png; name="image006.png"
+Content-Transfer-Encoding: base64
+Content-ID: <image006.png@01D5AF80.830E3A00>
+
+
+------=_NextPart_000_0066_01D5AF80.83865030--
